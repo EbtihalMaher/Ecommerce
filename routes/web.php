@@ -57,6 +57,6 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group( function(){
 Route::get('/', 'App\Http\Controllers\Website\WebsiteController@index');
 Route::get('store','App\Http\Controllers\Website\WebsiteController@store');
 Route::get('viewStore/{name}','App\Http\Controllers\Website\WebsiteController@viewStore');
-Route::get('store/{storeName}/{productName}','App\Http\Controllers\Website\WebsiteController@productview');
+Route::get('store/{storeId}/{id}','App\Http\Controllers\Website\WebsiteController@productview');
 Route::post('search', 'App\Http\Controllers\Website\WebsiteController@search');
 Route::post('transaction/{id}/{price}', 'App\Http\Controllers\Website\WebsiteController@addPurchaseTransaction');

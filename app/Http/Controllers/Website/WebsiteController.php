@@ -73,11 +73,10 @@ class WebsiteController extends Controller
     public function search(Request $request)
     {
     $search = $request['search'];
-    $product = Product::where('name', 'LIKE', "%$search%")->get();
-    foreach ($product as $product) {
-        $product->image = Storage::url($product->image);
-    }
-    return view('website.productView',compact('product'));
+    $products = Product::where('name', 'LIKE', "%$search%")->get();
+
+    return view('website.product',compact('products'));
+    
 
     }
         

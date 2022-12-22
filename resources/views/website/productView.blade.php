@@ -24,7 +24,8 @@
        <div class="card-body">
            <div class="row product_data">
             <div class="col-md-4 border-right">
-                <img src="{{asset('uploads/product/' .$product->image)}}" class="w-100 " alt="">
+                
+                <img src="{{asset('uploads/product/' .$product->image)}}" class="w-100 h-100" alt="">
             </div>
             <div class="col-md-8">
             <h2 class="mb-0">
